@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts  PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.objectFactory" value="spring"></constant>
+	<constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+	 <constant name="struts.multipart.saveDir" value="e:" />    
+	<package name="default" namespace="/" extends="struts-default">
+		
+		<action name="admin_*" class="rent.action.LoginAction" method="{1}">
+			<result name="list" type="redirect">/ad_querydshfy</result>
+			<result name="fdlist"  type="redirect">/queryfdfy</result>
+			<result name="adminerror">/adminLogin.jsp</result>
+			<result name="fderror">/fdLogin.jsp</result>
+			<allowed-methods>regex:.*</allowed-methods>
+		</action>
+		<action name="echeckName" class="rent.action.RegisterAction" method="checkName">
+     		<result type="stream" name="ajax-success">
+      			<param name="contentType">text/html</param>
+      			<param name="inputName">inputStream</param>
+    		 </result>
+  		</action>
+		<action name="register" class="rent.action.RegisterAction" method="register">
+			<result name="login">/fdLogin.jsp</result>
+			<interceptor-ref name="fileUpload">
+			<param name="allowdeTypes">image/bmp,image/x-png,image/jpeg</param>
+				<param name="maximumSize">5M</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>     
+		</action>
+		<action name="save" class="rent.action.FdRegisterAction" method="save">
+			<result name="register"  type="redirect">/queryfdfy</result>
+			<interceptor-ref name="fileUpload">
+			<param name="allowdeTypes">image/bmp,image/x-png,image/jpeg</param>
+				<param name="maximumSize">5M</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>     
+		</action>
+		
+		<action name="queryfyxx" class="rent.action.FyQueryAction" method="query">
+			<result name="queryfy">/fyxx.jsp</result>
+		</action>
+		
+		<action name="queryfdfy" class="rent.action.FdfyQueryAction" method="queryfdfy">
+			<result name="fdfyquery">/fdfyxx.jsp</result>
+		</action>
+		
+		<action name="querytgfdfy" class="rent.action.FdfyQueryAction" method="querytgfdfy">
+			<result name="tgfdfyquery">/tgfdfyxx.jsp</result>
+		</action>
+		
+		<action name="queryxx" class="rent.action.FyxxQueryAction" method="queryxx">
+			<result name="querymx">/fyxxmx.jsp</result>
+		</action>
+		
+		<action name="updatefy" class="rent.action.FyxxQueryAction" method="qupdatexx">
+			<result name="qupdate">/fyupdate.jsp</result>
+		</action>
+		<action name="fyupdate" class="rent.action.FyUpdateAction" method="saveall">
+			<result name="update" type="redirect">/queryfdfy</result>
+		</action>
+		<action name="delete" class="rent.action.FyDeleteAction" method="delete">
+			<result name="delete" type="redirect">/queryfdfy</result>
+		</action>
+		
+		<action name="ad_*" class="rent.action.AdminAction" method="{1}">
+			<result name="towt">/adminfywt.jsp</result>
+			<result name="adqueryxx">/adminfymx.jsp</result>
+			<result name="querydshfy">/adminfy.jsp</result>
+			<result name="passfy" type="redirect">/ad_querydshfy</result>
+			<result name="addwt"  type="redirect">/ad_querydshfy</result>
+			<result name="updatewt"  type="redirect">/ad_querydshfy</result>
+			<allowed-methods>regex:.*</allowed-methods>
+		</action>
+		
+		<action name="fd_*" class="rent.action.FdUpdateAction" method="{1}">
+			<result name="updatefd" type="redirect">/queryfdfy</result>
+			<result name="queryfd">/fdxxupdate.jsp</result>
+			<result name="updatepw" type="redirect">/queryfdfy</result>
+			<result type="stream" name="ajax-pw">
+      			<param name="contentType">text/html</param>
+      			<param name="inputName">inputStream</param>
+    		 </result>
+    		 <allowed-methods>regex:.*</allowed-methods>
+		</action>
+	</package>
+</struts>

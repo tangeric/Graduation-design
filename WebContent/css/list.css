@@ -1,0 +1,18 @@
+@CHARSET "UTF-8";
+#fyxx{
+	width:80%;
+	text-align: center;
+}
+#select{
+	margin: 0 auto;
+}
+#loginbutton{
+	float:right;
+}
+.pic{
+	width:200px;
+	height: 150px;
+}
+.price{
+	line-height: 150px;
+}

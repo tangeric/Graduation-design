@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-22 19:46:42 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="rent.model.FyMainModel" table="FYMAINMODEL">
+        <id name="fy_id" type="java.lang.String">
+            <column name="FY_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fd_id" type="java.lang.String">
+            <column name="FD_ID" />
+        </property>
+        <property name="title" type="java.lang.String">
+            <column name="TITLE" />
+        </property>
+        <property name="notice" type="java.lang.String">
+            <column name="NOTICE" />
+        </property>
+        <property name="createTime" type="java.lang.String">
+            <column name="CREATETIME" />
+        </property>
+        <property name="method" type="java.lang.String">
+            <column name="METHOD" />
+        </property>
+        <property name="price" type="double">
+            <column name="PRICE" />
+        </property>
+        <property name="payMethod" type="java.lang.String">
+            <column name="PAYMETHOD" />
+        </property>
+        <property name="fypz" type="java.lang.String">
+            <column name="FYPZ" />
+        </property>
+        <property name="fcz_pic" type="java.lang.String">
+            <column name="FCZ_PIC" />
+        </property>
+        <property name="flag" type="java.lang.String">
+            <column name="FLAG" />
+        </property>
+        <property name="delflag" type="java.lang.String">
+            <column name="DELFLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

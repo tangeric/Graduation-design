@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-22 19:46:42 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="rent.model.FyPicModel" table="FYPICMODEL">
+        <id name="fytp_id" type="java.lang.String">
+            <column name="FYTP_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fy_id" type="java.lang.String">
+            <column name="FY_ID" />
+        </property>
+        <property name="pic1" type="java.lang.String">
+            <column name="PIC1" />
+        </property>
+        <property name="pic2" type="java.lang.String">
+            <column name="PIC2" />
+        </property>
+        <property name="pic3" type="java.lang.String">
+            <column name="PIC3" />
+        </property>
+        <property name="pic4" type="java.lang.String">
+            <column name="PIC4" />
+        </property>
+        <property name="pic5" type="java.lang.String">
+            <column name="PIC5" />
+        </property>
+        <property name="pic6" type="java.lang.String">
+            <column name="PIC6" />
+        </property>
+    </class>
+</hibernate-mapping>

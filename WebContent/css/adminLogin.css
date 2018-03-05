@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+#form-div{
+	width: 200px;
+	margin: 0 auto;
+}
+
+.button{
+	margin-right: 80px;
+}
+.tpimg{
+				width:200px;
+				height: 150px;
+		}
+/*
+
+body{
+	background-image:url(../img/1451367171338.jpg); 
+	background-repeat:no-repeat;background-position:center;
+}
+*/

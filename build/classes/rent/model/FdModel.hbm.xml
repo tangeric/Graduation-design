@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-22 19:46:42 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="rent.model.FdModel" table="FDMODEL">
+        <id name="fd_id" type="java.lang.String">
+            <column name="FD_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="loginName" type="java.lang.String">
+            <column name="LOGINNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="realName" type="java.lang.String">
+            <column name="REALNAME" />
+        </property>
+        <property name="idetityPic" type="java.lang.String">
+            <column name="IDETITYPIC" />
+        </property>
+        <property name="phoneNumber" type="java.lang.String">
+            <column name="PHONENUMBER" />
+        </property>
+        <property name="flag" type="java.lang.String">
+            <column name="FLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

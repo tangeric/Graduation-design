@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-22 19:46:42 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="rent.model.FywzModel" table="FYWZMODEL">
+        <id name="fywz_id" type="java.lang.String">
+            <column name="FYWZ_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fy_id" type="java.lang.String">
+            <column name="FY_ID" />
+        </property>
+        <property name="District" type="java.lang.String">
+            <column name="DISTRICT" />
+        </property>
+        <property name="village" type="java.lang.String">
+            <column name="VILLAGE" />
+        </property>
+        <property name="metro" type="java.lang.String">
+            <column name="METRO" />
+        </property>
+        <property name="position" type="java.lang.String">
+            <column name="POSITION" />
+        </property>
+    </class>
+</hibernate-mapping>

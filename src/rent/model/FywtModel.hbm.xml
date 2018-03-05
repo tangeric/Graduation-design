@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-1-22 19:46:42 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="rent.model.FywtModel" table="FYWTMODEL">
+        <id name="fywt_id" type="java.lang.String">
+            <column name="FYWT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fy_id" type="java.lang.String">
+            <column name="FY_ID" />
+        </property>
+        <property name="admin_id" type="java.lang.String">
+            <column name="ADMIN_ID" />
+        </property>
+        <property name="reason" type="java.lang.String">
+            <column name="REASON" />
+        </property>
+        <property name="Flag" type="java.lang.String">
+            <column name="FLAG" />
+        </property>
+    </class>
+</hibernate-mapping>

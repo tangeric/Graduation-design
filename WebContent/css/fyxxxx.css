@@ -1,0 +1,52 @@
+#top{
+	margin-top: 30px;
+	text-align: center;
+}
+#title{
+	font-size: 26px;
+	font-weight: bold;
+}
+#middle{
+	margin-top: 50px;
+	text-align: center;
+}
+#tp{
+	margin-left: 15%;
+	float: left;
+	width: 500px;
+	height: 400px;
+}
+.imgxx{
+	width: 600px;
+	height: 500px;
+}
+#img{
+	width: 90%;
+	height: 80%;
+}
+#fyxx{
+	float: left;
+	width: 500px;
+	height: 400px;
+}
+#fytable{
+	text-align: center;
+	width: 400px;
+	height: 300px;
+	margin:auto;
+}
+#detail{
+	padding-left: 5%;
+	position: absolute;
+	top: 470px;
+	width: 100%;
+	height: 500px;
+}
+.bigfont{
+	font-size: 20px;
+	font-weight: bold;
+}
+#frame{
+	width:80%;
+	height:100%;
+}

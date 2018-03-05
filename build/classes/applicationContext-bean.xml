@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="loginDao" class="rent.dao.LoginDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="loginService" class="rent.service.impl.LoginService">
+		<property name="loginDao" ref="loginDao"></property>
+	</bean>
+	
+	<bean id="loginAction" class="rent.action.LoginAction">
+		<property name="loginService" ref="loginService"></property>
+	</bean>
+	<bean id="registerDao" class="rent.dao.RegisterDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	<bean id="registerService" class="rent.service.impl.RegisterServiceImpl">
+		<property name="registerDao" ref="registerDao"></property>
+	</bean>
+	<bean id="registerAction" class="rent.action.RegisterAction">
+		<property name="registerService" ref="registerService"></property>
+	</bean>
+	
+	<bean id="fdRegisterDao" class="rent.dao.FdRegisterDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fdRegisterService" class="rent.service.impl.FdRegisterServiceImpl">
+		<property name="fdRegisterDao" ref="fdRegisterDao"></property>
+	</bean>
+	
+	<bean id="fdRegisterAction" class="rent.action.FdRegisterAction">
+		<property name="fdRegisterService" ref="fdRegisterService"></property>
+	</bean>
+	
+	<bean id="fyQueryDao" class="rent.dao.FyQueryDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fyQueryService" class="rent.service.impl.FyQueryServiceImpl">
+		<property name="fyQueryDao" ref="fyQueryDao"></property>
+	</bean>
+	
+	<bean id="fdQueryAction" class="rent.action.FyQueryAction">
+		<property name="fyQueryService" ref="fyQueryService"></property>
+	</bean>
+	<bean id="fyxxQueryDao" class="rent.dao.FyxxQueryDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fyxxQueryService" class="rent.service.impl.FyxxQueryServiceImpl">
+		<property name="fyxxQueryDao" ref="fyxxQueryDao"></property>
+	</bean>
+	
+	<bean id="fyxxQueryAction" class="rent.action.FyxxQueryAction">
+		<property name="fyxxQueryService" ref="fyxxQueryService"></property>
+	</bean>
+	
+	<bean id="fdfyQueryDao" class="rent.dao.FdfyQueryDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fdfyQueryService" class="rent.service.impl.FdfyQueryServiceImpl">
+		<property name="fdfyQueryDao" ref="fdfyQueryDao"></property>
+	</bean>
+	
+	<bean id="fdfyQueryAction" class="rent.action.FdfyQueryAction">
+		<property name="fdfyQueryService" ref="fdfyQueryService"></property>
+	</bean>
+	
+	<bean id="fyUpdateDao" class="rent.dao.FyUpdateDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fyUpdateService" class="rent.service.impl.FyUpdateServiceImpl">
+		<property name="fyUpdateDao" ref="fyUpdateDao"></property>
+	</bean>
+	
+	<bean id="fyUpdateAction" class="rent.action.FyUpdateAction">
+		<property name="fyUpdateService" ref="fyUpdateService"></property>
+	</bean>
+	
+	<bean id="fyDeleteDao" class="rent.dao.FyDeleteDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fyDeleteService" class="rent.service.impl.FyDeleteServiceImpl">
+		<property name="fyDeleteDao" ref="fyDeleteDao"></property>
+	</bean>
+	
+	<bean id="fyDeleteAction" class="rent.action.FyDeleteAction">
+		<property name="fyDeleteService" ref="fyDeleteService"></property>
+	</bean>
+	
+	<bean id="adminDao"	class="rent.dao.AdminDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="adminService" class="rent.service.impl.AdminServiceImpl">
+		<property name="adminDao" ref="adminDao"></property>
+	</bean>
+	
+	<bean id="adminAction" class="rent.action.AdminAction">
+		<property name="adminService" ref="adminService"></property>
+	</bean>
+	
+	<bean id="fdUpdateDao" class="rent.dao.FdUpdateDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fdUpdateService" class="rent.service.impl.FdUpdateServiceImpl">
+		<property name="fdUpdateDao" ref="fdUpdateDao"></property>
+	</bean>
+	
+	<bean id="fdUpdateAction" class="rent.action.FdUpdateAction">
+		<property name="fdUpdateService" ref="fdUpdateService"></property>
+	</bean>
+</beans>

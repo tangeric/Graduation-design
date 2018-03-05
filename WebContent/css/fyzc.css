@@ -1,0 +1,31 @@
+
+			#form-div{
+				width: 500px;
+				margin: 0 auto;
+			}
+            #form-div1{
+            	width: 700px;
+				margin-left: 37%;
+            }
+            #form-div2{
+            	width: 700px;
+				margin-left: 37%;
+            }
+             #form-div3{
+            	width: 700px;
+				margin-left: 37%;
+            }
+             #form-div4{
+            	width: 700px;
+				margin-left: 37%;
+            }
+			.button{
+				margin-right: 200px;
+			}
+			.width{
+				width:150px;
+			}
+			.tpimg{
+				width:200px;
+				height: 150px;
+			}
