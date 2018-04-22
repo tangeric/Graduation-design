@@ -191,7 +191,7 @@
 					<tr>
 						<td><label>房产证照片：</label></td>
 						<td><input type="file" name="fczpic" id="fileupload"></td>
-						<td>&nbsp;&nbsp;&nbsp;<img src="${list[26] }" id="imageview" class="img-rounded tpimg"></td>
+						<td>&nbsp;&nbsp;&nbsp;<img src="${list[27] }" id="imageview" class="img-rounded tpimg"></td>
 					</tr>
 				</table>
 				<br />

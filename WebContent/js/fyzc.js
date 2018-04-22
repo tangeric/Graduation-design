@@ -79,4 +79,50 @@ $(function () {
         dataURL = windowURL.createObjectURL(objUrl);  
         $("#imageview6").attr("src",dataURL);  
     });
+    $("#login").click(function(){
+    	 var count = 0;
+    	    var checkArry = document.getElementsByName("fypz");
+    	            for (var i = 0; i < checkArry.length; i++) { 
+    	                if(checkArry[i].checked == true){
+    	                    //选中的操作
+    	                    count++; 
+    	                }
+    	            }
+    	    if( count == 0 ){
+    	        alert("至少选择一个房源配置");
+    	        return false;
+    	    }
+    	 if($("#place").val()==""){
+    		 alert("请填写房源所在地名！！");
+ 	        return false;
+    	 }
+    	 if($("#floor").val()==""){
+    		 alert("请填写楼层！！");
+ 	        return false;
+    	 }
+    	 if($("#price").val()==""){
+    		 alert("请填写楼层！！");
+ 	        return false;
+    	 }
+    	 if($(".fczpic").val()==""){
+    		 alert("请上传房产证照片！！");
+ 	        return false;
+    	 }
+    	 if($(".fypic").val()==""){
+    		 alert("请上传房源照片！！");
+ 	        return false;
+    	 }
+    	 if($("#title").val()==""){
+    		 alert("请输入标题！！");
+ 	        return false;
+    	 }
+    	 if($("#village").val()==""){
+    		 alert("请输入小区名称！！");
+ 	        return false;
+    	 }
+    	 if($("#notice").val()==""){
+    		 alert("请输入内容！！");
+ 	        return false;
+    	 }
+    });
 });  

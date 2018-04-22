@@ -57,7 +57,7 @@
 					<table>
 						<tr>
 							<td><label class="control-label">房源所在地地名：</label></td>
-							<td><input name="position" type="text" class="form-control width">
+							<td><input name="position" id="place" type="text" class="form-control width">
 							</td>
 						</tr>
 					</table>
@@ -102,10 +102,10 @@
 					<table>
 						<tr>
 							<td><label class="control-label">房源楼层：</label></td>
-							<td><input name="floor" type="text" class="form-control width"></td>
+							<td><input name="floor" type="text" id="floor" class="form-control width"></td>
 							<td>&nbsp;&nbsp;楼</td>
 							<td><label class="control-label">&nbsp;&nbsp;&nbsp;&nbsp;房源面积：</label></td>
-							<td><input name="area" type="text" class="form-control width"></td>
+							<td><input name="area" type="text" id="area" class="form-control width"></td>
 							<td>&nbsp;&nbsp;平方米</td>
 						</tr>
 					</table>
@@ -160,7 +160,7 @@
 					<table>
 						<tr>
 							<td><label class="control-label">价格：</label></td>
-							<td><input name="price" type="text" class="form-control width"></td>
+							<td><input name="price" type="text" id="price" class="form-control width"></td>
 							<td>&nbsp;&nbsp;元/月</td>
 						</tr>
 					</table>
@@ -170,7 +170,7 @@
 			        <div class="form-group">
 			        	<table>
 			        		<tr>
-			        			<td><label>房源年份：</label></td>
+			        			<td><label>房源建造年份：</label></td>
 			        			<td>
 			        				<div class='input-group date' id='datetimepicker1'>  
 						                <input type='text' name="year" class="form-control"/>  
@@ -189,59 +189,59 @@
 				<table>
 					<tr>
 						<td><label>房产证照片：</label></td>
-						<td><input type="file" name="fczpic"></td>
+						<td><input type="file" name="fczpic" class="fczpic"></td>
 					</tr>
 				</table>
 				<br />
 				<table>
 					<tr>
 						<td><label>房源图片1：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 				<br>
 				 <table>
 					<tr>
 						<td><label>房源图片2：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 				<br>
 			   <table>
 					<tr>
 						<td><label>房源图片3：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 				<br>
 			   <table>
 					<tr>
 						<td><label>房源图片4：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 				<br>
 			   <table>
 					<tr>
 						<td><label>房源图片5：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 				<br>
 			   <table>
 					<tr>
 						<td><label>房源图片6：</label></td>
-						<td><input type="file" name="fypic"></td>
+						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
 			</div>
 			<div class="form-group has-feedback" id="form-div4">
 			   <label class="control-label">房源标题：</label>
-			   <input type="text" class="form-control"  name="title" id="username" />
+			   <input type="text" class="form-control"  name="title" id="title" />
 			   <label>小区名：</label>
-			  <input type="text" class="form-control" name="village" id="username" />
+			  <input type="text" class="form-control" name="village" id="village" />
 			  <label>房源描述：</label>
-			  <textarea class="form-control" name="notice" rows="5"></textarea>   
+			  <textarea class="form-control" name="notice" id="notice" rows="5"></textarea>   
 			</div>
 			<br />
 			<div class="form-group has-feedback" id="form-div">
