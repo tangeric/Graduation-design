@@ -11,16 +11,29 @@
 <link rel="stylesheet" href="css/adminLogin.css" />
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="#">房地产租赁信息系统</a>
+		</div>
+		<div>
+	        <ul class="nav navbar-nav">
+	            <li><a href="queryfyxx">房源查询</a></li>
+	            <li class="active"><a href="#">房东登录</a></li>
+	            <li><a href="adminLogin.jsp">管理员登录</a></li>
+	            <li><a href="fdregister.jsp">成为房东</a></li>
+	        </ul>
+	    </div>
+    </div>
+</div>
 <input type="hidden" value="${error}" id="error">
-<h2 align="center">房地产租赁管理信息系统</h2>
-		<br />
-		<h3 align="center">房东登录</h3>
-		<form class="form-horizontal" action="admin_fdLogin" method="post">
+		<h3 align="center" class="fontcolor">房东登录</h3>
+		<form class="form-horizontal" action="admin_fdLogin" method="post"><br><br><br>
 			<div class="form-group has-feedback" id="form-div">
-			   <label class="control-label">用户名：</label>
+			   <label class="control-label fontcolor">用户名：</label>
 			   <input type="text" name="username" class="form-control" id="username"/>
 			   <br />
-			   <label>密码：</label>
+			   <label class="fontcolor">密码：</label>
 			   <input type="password" name="password" class="form-control" id="ps"/>
 			   <br /><br />
 			    <button type="submit" class="btn btn-info button" id="login">登录</button>

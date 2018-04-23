@@ -34,10 +34,21 @@ function handlePaginationClick(new_page_index,pagination_container){
 </script>
 </head>
 <body>
-<div id="top">
-			<a class="btn btn-default" href="fdLogin.jsp">房东登陆</a>
-			<a class="btn btn-info" href="fdregister.jsp">房东注册</a>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="#">房地产租赁信息系统</a>
 		</div>
+		<div>
+	        <ul class="nav navbar-nav">
+	            <li class="active"><a href="#">房源查询</a></li>
+	            <li><a href="fdLogin.jsp">房东登录</a></li>
+	            <li><a href="adminLogin.jsp">管理员登录</a></li>
+	            <li><a href="fdregister.jsp">成为房东</a></li>
+	        </ul>
+	    </div>
+    </div>
+</div>
 		<div id="middle">
 			<h2 align="center">房地产租赁信息系统</h2>
 			<div id="search">

@@ -12,6 +12,22 @@
 
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="#">房地产租赁信息系统</a>
+		</div>
+		<div>
+	        <ul class="nav navbar-nav">
+	            <li><a href="querytgfdfy">我的房源</a></li>
+	            <li><a href="queryfdfy">待审核房源</a></li>
+	            <li><a href="fyzc.jsp">房源上传</a></li>
+	            <li class="active"><a href="#">个人信息修改</a></li>
+	            <li><a href="fdmmUpdate.jsp">密码修改</a></li>
+	        </ul>
+	    </div>
+    </div>
+</div>
 	<h3 align="center">房东信息修改</h3>
 		<form class="form-horizontal" action="fd_updatefd" method="post" enctype="multipart/form-data">
 			<div class="form-group has-feedback" id="form-div">
