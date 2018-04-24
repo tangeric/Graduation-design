@@ -21,7 +21,7 @@
 	            <li><a href="querytgfdfy">我的房源</a></li>
 	            <li><a href="queryfdfy">待审核房源</a></li>
 	            <li><a href="fyzc.jsp">房源上传</a></li>
-	            <li><a href="#">个人信息修改</a></li>
+	            <li><a href="fd_queryfd">个人信息修改</a></li>
 	            <li class="active"><a href="#">密码修改</a></li>
 	        </ul>
 	    </div>
@@ -30,13 +30,13 @@
 <h3 align="center">修改密码</h3>
 		<form class="form-horizontal" action="fd_updatepw" method="post">
 			<div class="form-group has-feedback" id="form-div">
-			   <label class="control-label">原密码：</label>
+			   <label class="control-label fontcolor">原密码：</label>
 			   <input type="password" class="form-control" id="oldpw"/>
 			   <br />
-			   <label>密码：</label>
+			   <label  class="fontcolor">密码：</label>
 			   <input type="password" name="password" class="form-control" id="ps"/>
 			   <br />
-			   <label>再次输入密码：</label>
+			   <label  class="fontcolor">再次输入密码：</label>
 			   <input type="password" class="form-control" id="ps1"/>
 			   <br /><br />
 			    <button type="submit" id="submit" class="btn btn-info button">确认修改</button>

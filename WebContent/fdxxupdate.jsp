@@ -31,16 +31,16 @@
 	<h3 align="center">房东信息修改</h3>
 		<form class="form-horizontal" action="fd_updatefd" method="post" enctype="multipart/form-data">
 			<div class="form-group has-feedback" id="form-div">
-			   <label class="control-label">用户名：</label>
+			   <label class="control-label fontcolor">用户名：</label>
 			   <input type="text" name="loginName" class="form-control" value="${fd.loginName }" id="username"/>
 			   <br />
-			   <label>真实姓名：</label>
+			   <label  class="fontcolor">真实姓名：</label>
 			   <input type="text" id="realName" name="realName" value="${fd.realName }" class="form-control"/>
 			   <br />
-			   <label>联系电话：</label>
+			   <label  class="fontcolor">联系电话：</label>
 			   <input type="text" name="phoneNumber" id="phoneNumber" value="${fd.phoneNumber }" class="form-control"/>
 			   <br />
-			   <label>身份证正面照片：</label>
+			   <label  class="fontcolor">身份证正面照片：</label>
 			   <input type="file" name="file1" id="exampleInputFile">
 			   <img alt="222" src="${fd.idetityPic }" class="img-rounded tpimg">
 			   <br /><br />

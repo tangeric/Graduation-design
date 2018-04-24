@@ -10,6 +10,7 @@ $(document).ready(function(){
 			 $(this).nextAll("span").remove();
 			   psflag=true;
 		 }else{
+			 $(this).nextAll("span").remove();
 			 $(this).after("<span style='color: red;'>密码不能为空</span>");
 		 } 
 	});
@@ -20,6 +21,7 @@ $(document).ready(function(){
 			 $(this).nextAll("span").remove();
 			   rnflag=true;
 		 }else{
+			 $(this).nextAll("span").remove();
 			 $(this).after("<span style='color: red;'>姓名不能为空</span>");
 		 } 
 	});
@@ -30,6 +32,7 @@ $(document).ready(function(){
 			 $(this).nextAll("span").remove();
 			   pnflag=true;
 		 }else{
+			 $(this).nextAll("span").remove();
 			 $(this).after("<span style='color: red;'>电话号码不能为空</span>");
 		 } 
 	});
