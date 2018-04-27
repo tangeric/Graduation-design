@@ -6,11 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>我的待审核房源</title>
-<link rel="stylesheet" href="css/fwxx.css" />
-<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/pagination.css" />
+<link rel="stylesheet" href="css/fwxx.css" />
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/jquery.pagination.js"></script>
+<script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/fwxx.js" ></script>
 <script type="text/javascript">
 $(document).ready(function(){  
@@ -46,6 +47,10 @@ function handlePaginationClick(new_page_index,pagination_container){
 	            <li><a href="fd_queryfd">个人信息修改</a></li>
 	            <li><a href="fdmmUpdate.jsp">密码修改</a></li>
 	        </ul>
+	        <ul class="nav navbar-nav navbar-right"> 
+	            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.username}</a></li> 
+	            <li><a href="fdLogin.jsp"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li> 
+	        </ul>
 	    </div>
     </div>
 </div>
@@ -54,8 +59,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 	<form method="post" id="stuForm" action="#">
 	</form>
 	<div id="fynr">
-		<ul>
-		
+		<ul class="content">
 		<s:iterator value="#request.list" var="fy">
 			<li>
 				<div class="tp">
@@ -98,6 +102,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 				</div>
 			</li>
 		</s:iterator>
+		<div style="clear:both;"></div>
 		</ul>
 	</div>
 </div>

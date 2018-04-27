@@ -7,7 +7,7 @@
 <title>修改密码</title>
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/fdmmupdate.js"></script>
-<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/adminLogin.css" />
 </head>
 <body>
@@ -24,6 +24,10 @@
 	            <li><a href="fd_queryfd">个人信息修改</a></li>
 	            <li class="active"><a href="#">密码修改</a></li>
 	        </ul>
+	        <ul class="nav navbar-nav navbar-right"> 
+	            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.username}</a></li> 
+	            <li><a href="fdLogin.jsp"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li> 
+	        </ul>
 	    </div>
     </div>
 </div>
@@ -39,7 +43,7 @@
 			   <label  class="fontcolor">再次输入密码：</label>
 			   <input type="password" class="form-control" id="ps1"/>
 			   <br /><br />
-			    <button type="submit" id="submit" class="btn btn-info button">确认修改</button>
+			    <button type="submit" id="submit" class="btn btn-info button">修改</button>
 			    <button type="reset" class="btn btn-default">重置</button>
 			   
 			</div>

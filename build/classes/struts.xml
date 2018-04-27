@@ -64,6 +64,12 @@
 			<result name="delete" type="redirect">/queryfdfy</result>
 		</action>
 		
+		<action name="fdxx_*" class="rent.action.FdxxQueryAction" method="{1}">
+			<result name="fdxxquery">/fdxx.jsp</result>
+			<result name="fdxxdel" type="redirect">/fdxx_fdxxQuery</result>
+			<allowed-methods>regex:.*</allowed-methods>
+		</action>
+		
 		<action name="ad_*" class="rent.action.AdminAction" method="{1}">
 			<result name="towt">/adminfywt.jsp</result>
 			<result name="adqueryxx">/adminfymx.jsp</result>
@@ -76,7 +82,9 @@
 		
 		<action name="fd_*" class="rent.action.FdUpdateAction" method="{1}">
 			<result name="updatefd" type="redirect">/queryfdfy</result>
+			<result name="adminupdatefd" type="redirect">/fdxx_fdxxQuery</result>
 			<result name="queryfd">/fdxxupdate.jsp</result>
+			<result name="queryfdxx">/adminUpdatefdxx.jsp</result>
 			<result name="updatepw" type="redirect">/queryfdfy</result>
 			<result type="stream" name="ajax-pw">
       			<param name="contentType">text/html</param>

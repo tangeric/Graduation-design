@@ -117,7 +117,7 @@ public class RegisterAction extends ActionSupport{
 	
 	public String register() throws IOException{
 		String name=StringUtil.getUUID();
-		 String root = ServletActionContext.getServletContext().getRealPath("/"+name);
+		 String root = ServletActionContext.getServletContext().getRealPath("/img/"+name);
 		 //输出流  
 	        OutputStream os;
 			try {
@@ -128,7 +128,7 @@ public class RegisterAction extends ActionSupport{
 					file.createNewFile();
 
 				}
-				String path=name+"/"+file.getName();
+				String path="img/"+name+"/"+file.getName();
 				os = new FileOutputStream(file);
 				 //输入流  
 		        InputStream is = new FileInputStream(file1);  

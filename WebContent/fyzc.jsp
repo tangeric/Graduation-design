@@ -9,11 +9,16 @@
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" href="css/fyzc.css" />
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
 <script type="text/javascript" src="js/moment-with-locales.js" ></script>
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/fyzc.js" ></script>
-<link rel="stylesheet" href="css/fyzc.css" />
+<style type="text/css">
+body{
+	background-color:  #d0dace;
+}
+</style>
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -29,11 +34,23 @@
 	            <li><a href="fd_queryfd">个人信息修改</a></li>
 	            <li><a href="fdmmUpdate.jsp">密码修改</a></li>
 	        </ul>
+	        <ul class="nav navbar-nav navbar-right"> 
+	            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.username}</a></li> 
+	            <li><a href="fdLogin.jsp"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li> 
+	        </ul> 
 	    </div>
     </div>
 </div>
-	<h3 align="center">房源信息注册</h3>
+<br><br><br>
 		<form class="form-horizontal" action="save" method="post" enctype="multipart/form-data">
+			<div class="form-group has-feedback" id="form-div4">
+			   <label class="control-label">房源标题：</label>
+			   <input type="text" class="form-control"  name="title" id="title" />
+			   <label>小区名：</label>
+			  <input type="text" class="form-control" name="village" id="village" />
+			  <label>房源描述：</label>
+			  <textarea class="form-control" name="notice" id="notice" rows="5"></textarea>   
+			</div>
 			<div class="form-group has-feedback" id="form-div1">
 				<label class="control-label">租赁方式：</label>
   					<input type="radio" name="zlfs"  value="整租"> 整租
@@ -250,14 +267,6 @@
 						<td><input type="file" name="fypic" class="fypic"></td>
 					</tr>
 				</table>
-			</div>
-			<div class="form-group has-feedback" id="form-div4">
-			   <label class="control-label">房源标题：</label>
-			   <input type="text" class="form-control"  name="title" id="title" />
-			   <label>小区名：</label>
-			  <input type="text" class="form-control" name="village" id="village" />
-			  <label>房源描述：</label>
-			  <textarea class="form-control" name="notice" id="notice" rows="5"></textarea>   
 			</div>
 			<br />
 			<div class="form-group has-feedback" id="form-div">

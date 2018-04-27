@@ -49,6 +49,7 @@ public class LoginAction extends ActionSupport {
 		HttpSession session = request.getSession();
 		AdminModel adminModel=loginService.getadmin(username, password);
 		session.setAttribute("admin_id", adminModel.getAdmin_id());
+		session.setAttribute("adminname", adminModel.getLoginName());
 		return "list";
 	}
 	public String fdLogin(){
@@ -60,6 +61,7 @@ public class LoginAction extends ActionSupport {
 		HttpSession session = request.getSession();
 		FdModel fdModel= loginService.getmodel(username, password);
 		session.setAttribute("fd_id", fdModel.getFd_id());
+		session.setAttribute("username",fdModel.getLoginName());
 		return "fdlist";
 	}
 

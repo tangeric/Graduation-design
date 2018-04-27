@@ -286,7 +286,7 @@ public class FdRegisterAction extends ActionSupport{
 		HttpSession session = request.getSession();
 		String fd_id= session.getAttribute("fd_id").toString();
 		String name=StringUtil.getUUID();
-		 String root = ServletActionContext.getServletContext().getRealPath("/"+name);
+		 String root = ServletActionContext.getServletContext().getRealPath("/img/"+name);
 		 //输出流  
 	        OutputStream os;
 			try {
@@ -297,7 +297,7 @@ public class FdRegisterAction extends ActionSupport{
 					file.createNewFile();
  
 				}
-				String path= name+"/"+file.getName();
+				String path= "img/"+name+"/"+file.getName();
 				
 				
 				os = new FileOutputStream(file);
@@ -325,7 +325,7 @@ public class FdRegisterAction extends ActionSupport{
 	
 	public void savepic() throws IOException{
 		String name=StringUtil.getUUID();
-		 String root = ServletActionContext.getServletContext().getRealPath("/"+name);
+		 String root = ServletActionContext.getServletContext().getRealPath("/img/"+name);
 		 List<String> pathStr=new ArrayList<String>();
 		 
 		 for(int i=0;i<=5;i++){
@@ -339,7 +339,7 @@ public class FdRegisterAction extends ActionSupport{
 					file.createNewFile();
 
 				}
-				String path=name+"/"+file.getName();
+				String path="img/"+name+"/"+file.getName();
 				os = new FileOutputStream(file);
 				 //输入流  
 		        InputStream is = new FileInputStream(fypic.get(i));  

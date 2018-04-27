@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 <title>房地产租赁信息系统</title>
 
-<link rel="stylesheet" href="css/bootstrap.css" />
+<link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/pagination.css" />
 <link rel="stylesheet" href="css/fwxx.css" />
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
@@ -116,7 +116,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 				</form>
 			</div>
 			<div id="fynr">
-				<ul>
+				<ul class="content">
 				<s:iterator value="#request.list" var="fy">
 					<li>
 						<div class="tp">

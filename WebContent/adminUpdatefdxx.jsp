@@ -8,32 +8,11 @@
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/fdxxupdate.js" ></script>
 <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
-<link rel="stylesheet" href="css/adminLogin.css" />
-
+<link rel="stylesheet" href="css/adminUpdate.css" />
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-	    <div class="navbar-header">
-	        <a class="navbar-brand" href="#">房地产租赁信息系统</a>
-		</div>
-		<div>
-	        <ul class="nav navbar-nav">
-	            <li><a href="querytgfdfy">我的房源</a></li>
-	            <li><a href="queryfdfy">待审核房源</a></li>
-	            <li><a href="fyzc.jsp">房源上传</a></li>
-	            <li class="active"><a href="#">个人信息修改</a></li>
-	            <li><a href="fdmmUpdate.jsp">密码修改</a></li>
-	        </ul>
-	        <ul class="nav navbar-nav navbar-right"> 
-	            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.username}</a></li> 
-	            <li><a href="fdLogin.jsp"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li> 
-	        </ul>
-	    </div>
-    </div>
-</div>
 	<h3 align="center">房东信息修改</h3>
-		<form class="form-horizontal" action="fd_updatefd" method="post" enctype="multipart/form-data">
+		<form class="form-horizontal" action="fd_adminUpdatefd" method="post" enctype="multipart/form-data">
 			<div class="form-group has-feedback" id="form-div">
 			   <label class="control-label fontcolor">用户名：</label>
 			   <input type="text" name="loginName" class="form-control" value="${fd.loginName }" id="username"/>

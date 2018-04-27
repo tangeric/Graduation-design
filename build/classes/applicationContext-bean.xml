@@ -118,4 +118,16 @@
 	<bean id="fdUpdateAction" class="rent.action.FdUpdateAction">
 		<property name="fdUpdateService" ref="fdUpdateService"></property>
 	</bean>
+	
+	<bean id="fdxxQueryDao" class="rent.dao.FdxxQueryDao">
+		<property name="sf" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="fdxxQueryService" class="rent.service.impl.FdxxQueryServiceImpl">
+		<property name="fdxxQueryDao" ref="fdxxQueryDao"></property>
+	</bean>
+	
+	<bean id="fddxxQueryAction" class="rent.action.FdxxQueryAction">
+		<property name="fdxxQueryService" ref="fdxxQueryService"></property>
+	</bean>
 </beans>

@@ -116,6 +116,45 @@ public class FdUpdateAction extends ActionSupport {
 	public void setFdUpdateService(FdUpdateService fdUpdateService) {
 		this.fdUpdateService = fdUpdateService;
 	}
+	
+	public String adminUpdatefd() throws IOException{
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String fd_id=request.getSession().getAttribute("fd_id").toString();
+		String name=StringUtil.getUUID();
+		 String root = ServletActionContext.getServletContext().getRealPath("/img/"+name);
+		 //输出流  
+	        OutputStream os;
+			try {
+				
+				File file=new File(root,file1FileName);
+				if(!file.exists()){
+					file.getParentFile().mkdir();
+					file.createNewFile();
+
+				}
+				String path="img/"+name+"/"+file.getName();
+				os = new FileOutputStream(file);
+				 //输入流  
+		        InputStream is = new FileInputStream(file1);  
+		          
+		        byte[] buf = new byte[1024];  
+		        int length = 0 ;  
+		          
+		        while(-1 != (length = is.read(buf) ) )  
+		        {  
+		            os.write(buf, 0, length) ;  
+		        }  
+		        is.close();  
+		        os.close();  
+		        fdUpdateService.updatefdxx(loginName, phoneNumber, realName, path, fd_id);
+	}catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+			return "adminupdatefd";  
+	
+	}
+	
 	public String updatefd() throws IOException{
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String fd_id=request.getSession().getAttribute("fd_id").toString();
@@ -160,6 +199,14 @@ public class FdUpdateAction extends ActionSupport {
 		request.setAttribute("fd", fdModel);
 		return "queryfd";
 	}
+	public String queryfdxx(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String fd_id=request.getParameter("fd_id");
+		FdModel fdModel= fdUpdateService.queryfdxx(fd_id);
+		request.setAttribute("fd", fdModel);
+		return "queryfdxx";
+	}
+	
 	public String updatepw(){
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String fd_id=request.getSession().getAttribute("fd_id").toString();

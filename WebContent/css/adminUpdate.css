@@ -1,0 +1,17 @@
+@charset "UTF-8";
+#form-div{
+	width: 200px;
+	margin: 0 auto;
+}
+
+.button{
+	margin-right: 80px;
+}
+.tpimg{
+		width:200px;
+		height: 150px;
+		}
+
+body{
+		background-color: #d0dace;
+	}

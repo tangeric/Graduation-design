@@ -9,15 +9,23 @@
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" />
+<link rel="stylesheet" href="css/fyzc.css" />
 <script type="text/javascript" src="js/bootstrap-datetimepicker.js" ></script>
 <script type="text/javascript" src="js/moment-with-locales.js" ></script>
 <script type="text/javascript" src="js/bootstrap.js" ></script>
 <script type="text/javascript" src="js/fyzc.js" ></script>
-<link rel="stylesheet" href="css/fyzc.css" />
+
 </head>
 <body>
-	<h3 align="center">房源信息修改</h3>
 		<form class="form-horizontal" action="fyupdate?fy_id=${list[24] }" method="post" enctype="multipart/form-data">
+		<div class="form-group has-feedback" id="form-div4">
+			   <label class="control-label">房源标题：</label>
+			   <input type="text" class="form-control"  name="title" id="username" value="${list[0] }"/>
+			   <label>小区名：</label>
+			  <input type="text" class="form-control" name="village" id="username" value="${list[6] }"/>
+			  <label>房源描述：</label>
+			  <textarea class="form-control" name="notice" rows="5">${list[16] }</textarea>   
+			</div>
 		<s:if test="list[2]=='整租'">33333</s:if>
 			<div class="form-group has-feedback" id="form-div1">
 				<label class="control-label">租赁方式：</label>
@@ -242,14 +250,6 @@
 						<td>&nbsp;&nbsp;&nbsp;<img src="${list[23] }" id="imageview6" class="img-rounded tpimg imageview"></td>
 					</tr>
 				</table>
-			</div>
-			<div class="form-group has-feedback" id="form-div4">
-			   <label class="control-label">房源标题：</label>
-			   <input type="text" class="form-control"  name="title" id="username" value="${list[0] }"/>
-			   <label>小区名：</label>
-			  <input type="text" class="form-control" name="village" id="username" value="${list[6] }"/>
-			  <label>房源描述：</label>
-			  <textarea class="form-control" name="notice" rows="5">${list[16] }</textarea>   
 			</div>
 			<br />
 			<div class="form-group has-feedback" id="form-div">

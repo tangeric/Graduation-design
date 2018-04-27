@@ -6,9 +6,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>待审核房源</title>
-<link rel="stylesheet" href="css/fwxx.css" />
 <link rel="stylesheet" href="css/bootstrap-3.3.7-dist/css/bootstrap.css" />
 <link rel="stylesheet" href="css/pagination.css" />
+<link rel="stylesheet" href="css/fwxx.css" />
 <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
 <script type="text/javascript" src="js/jquery.pagination.js"></script>
 <script type="text/javascript" src="js/fwxx.js" ></script>
@@ -33,17 +33,32 @@ function handlePaginationClick(new_page_index,pagination_container){
 </script>
 </head>
 <body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+	    <div class="container-fluid">
+		    <div class="navbar-header">
+		        <a class="navbar-brand" href="#">房地产租赁信息系统</a>
+			</div>
+			<div>
+		        <ul class="nav navbar-nav">
+		            <li class="active"><a href="#">房源审核</a></li>
+		            <li><a href="">房源管理</a></li>
+		            <li><a href="fdxx_fdxxQuery">房东管理</a></li> 
+		        </ul>
+		        <ul class="nav navbar-nav navbar-right"> 
+		            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.adminname}</a></li> 
+		            <li><a href="adminLogin.jsp"><span class="glyphicon glyphicon-log-in"></span>&nbsp;退出</a></li> 
+	       		</ul>
+		    </div>
+	    </div>
+	</div>
 		<div  id="middle">
 			<h2 align="center">待审核房源</h2>
 			<form method="post" id="stuForm" action="#">
 			</form>
 			<div id="fynr">
-				<ul>
-				
+				<ul class="content">	
 				<s:iterator value="#request.list" var="fy">
 					<li>
-						
-						
 						<div class="tp">
 							<s:if test="#fy[16]==\"1\"">
 								<div id="info" class="alert-success" role="alert">
@@ -83,6 +98,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 						</div>
 					</li>
 				</s:iterator>
+				<div style="clear:both;"></div>
 				</ul>
 			</div>
 		</div>
