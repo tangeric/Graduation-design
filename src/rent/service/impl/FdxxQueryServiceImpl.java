@@ -30,5 +30,9 @@ public class FdxxQueryServiceImpl implements FdxxQueryService {
 	public void fdxxDelete(String fd_id) {
 		 fdxxQueryDao.fdxxDelete(fd_id);
 	}
+	
+	public List<Object> adminfyquery(){
+		return fdxxQueryDao.adminfyquery();
+	}
 
 }

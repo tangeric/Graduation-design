@@ -9,4 +9,6 @@ public interface FdxxQueryService {
 	public List<FdModel> fdxxQuery();
 	
 	public void fdxxDelete(String fd_id);
+	
+	public List<Object> adminfyquery();
 }

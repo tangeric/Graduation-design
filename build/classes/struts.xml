@@ -64,9 +64,14 @@
 			<result name="delete" type="redirect">/queryfdfy</result>
 		</action>
 		
+		<action name="admindelete" class="rent.action.FyDeleteAction" method="admindelete">
+			<result name="admindelete" type="redirect">/fdxx_adminfy</result>
+		</action>
+		
 		<action name="fdxx_*" class="rent.action.FdxxQueryAction" method="{1}">
 			<result name="fdxxquery">/fdxx.jsp</result>
 			<result name="fdxxdel" type="redirect">/fdxx_fdxxQuery</result>
+			<result name="adminfy">/adminfyxx.jsp</result>
 			<allowed-methods>regex:.*</allowed-methods>
 		</action>
 		

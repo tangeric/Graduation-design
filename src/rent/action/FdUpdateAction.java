@@ -159,7 +159,7 @@ public class FdUpdateAction extends ActionSupport {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String fd_id=request.getSession().getAttribute("fd_id").toString();
 		String name=StringUtil.getUUID();
-		 String root = ServletActionContext.getServletContext().getRealPath("/"+name);
+		 String root = ServletActionContext.getServletContext().getRealPath("/img/"+name);
 		 //输出流  
 	        OutputStream os;
 			try {
@@ -170,7 +170,7 @@ public class FdUpdateAction extends ActionSupport {
 					file.createNewFile();
 
 				}
-				String path=name+"/"+file.getName();
+				String path="img/"+name+"/"+file.getName();
 				os = new FileOutputStream(file);
 				 //输入流  
 		        InputStream is = new FileInputStream(file1);  

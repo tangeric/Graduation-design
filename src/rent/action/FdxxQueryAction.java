@@ -41,5 +41,10 @@ public class FdxxQueryAction extends ActionSupport {
 		fdxxQueryService.fdxxDelete(fd_id);
 		return "fdxxdel";
 	}
-
+	public String adminfy() {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		List<Object> adminlist= fdxxQueryService.adminfyquery();
+		request.setAttribute("adminlist", adminlist);
+		return "adminfy";
+	}
 }

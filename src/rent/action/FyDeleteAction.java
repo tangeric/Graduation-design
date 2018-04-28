@@ -31,5 +31,11 @@ public class FyDeleteAction extends ActionSupport {
 		fyDeleteService.delete(fy_id);
 		return "delete";
 	}
+	public String admindelete(){
+		HttpServletRequest request = ServletActionContext.getRequest();
+		String fy_id=request.getParameter("fy_id");
+		fyDeleteService.delete(fy_id);
+		return "admindelete";
+	}
 
 }

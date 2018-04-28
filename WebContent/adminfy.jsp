@@ -41,7 +41,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 			<div>
 		        <ul class="nav navbar-nav">
 		            <li class="active"><a href="#">房源审核</a></li>
-		            <li><a href="">房源管理</a></li>
+		            <li><a href="fdxx_adminfy">房源管理</a></li>
 		            <li><a href="fdxx_fdxxQuery">房东管理</a></li> 
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right"> 
