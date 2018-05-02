@@ -23,7 +23,7 @@
 			</div>
 			<div>
 		        <ul class="nav navbar-nav">
-		            <li><a href="querydshfy">房源审核</a></li>
+		            <li><a href="ad_querydshfy">房源审核</a></li>
 		            <li class="active"><a href="#">房源管理</a></li>
 		            <li><a href="fdxx_fdxxQuery">房东管理</a></li> 
 		        </ul>
