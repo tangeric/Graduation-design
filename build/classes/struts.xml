@@ -68,10 +68,17 @@
 			<result name="admindelete" type="redirect">/fdxx_adminfy</result>
 		</action>
 		
+		<action name="recoverfy" class="rent.action.FyDeleteAction" method="recoverfy">
+			<result name="recoverfy" type="redirect">/fdxx_querydelfy</result>
+		</action>
+		
 		<action name="fdxx_*" class="rent.action.FdxxQueryAction" method="{1}">
 			<result name="fdxxquery">/fdxx.jsp</result>
+			<result name="delfdxxquery">/recoverfd.jsp</result>
 			<result name="fdxxdel" type="redirect">/fdxx_fdxxQuery</result>
+			<result name="fdxxrec" type="redirect">/fdxx_delfdxxQuery</result>
 			<result name="adminfy">/adminfyxx.jsp</result>
+			<result name="querydelfy">/recoverfy.jsp</result>
 			<allowed-methods>regex:.*</allowed-methods>
 		</action>
 		

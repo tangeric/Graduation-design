@@ -42,7 +42,9 @@ function handlePaginationClick(new_page_index,pagination_container){
 		        <ul class="nav navbar-nav">
 		            <li class="active"><a href="#">房源审核</a></li>
 		            <li><a href="fdxx_adminfy">房源管理</a></li>
-		            <li><a href="fdxx_fdxxQuery">房东管理</a></li> 
+		            <li><a href="fdxx_querydelfy">删除房源恢复</a></li>
+		            <li><a href="fdxx_fdxxQuery">房东管理</a></li>
+		            <li><a href="fdxx_delfdxxQuery">房东删除恢复</a></li> 
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right"> 
 		            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.adminname}</a></li> 

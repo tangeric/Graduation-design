@@ -27,6 +27,15 @@ public class FdxxQueryServiceImpl implements FdxxQueryService {
 		return fdxxQueryDao.fdxxQuery();
 	}
 	
+	
+	
+	@Override
+	public List<FdModel> delfdxxQuery() {
+		// TODO Auto-generated method stub
+		return fdxxQueryDao.delfdxxQuery();
+	}
+
+
 	public void fdxxDelete(String fd_id) {
 		 fdxxQueryDao.fdxxDelete(fd_id);
 	}
@@ -34,5 +43,15 @@ public class FdxxQueryServiceImpl implements FdxxQueryService {
 	public List<Object> adminfyquery(){
 		return fdxxQueryDao.adminfyquery();
 	}
+	public List<Object> deletefyquery(){
+		return fdxxQueryDao.deletefyquery();
+	}
 
+
+	@Override
+	public void fdxxrecover(String fd_id) {
+		// TODO Auto-generated method stub
+		fdxxQueryDao.fdxxrecover(fd_id);
+	}
+	
 }

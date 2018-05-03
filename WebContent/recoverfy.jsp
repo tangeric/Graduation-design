@@ -25,8 +25,8 @@
 		        <ul class="nav navbar-nav">
 		            <li><a href="ad_querydshfy">房源审核</a></li>
 		            <li><a href="fdxx_adminfy">房源管理</a></li>
-		            <li><a href="fdxx_querydelfy">删除房源恢复</a></li>
-		            <li class="active"><a href="#">房东管理</a></li>
+		            <li  class="active"><a href="#">删除房源恢复</a></li>
+		            <li><a href="fdxx_fdxxQuery">房东管理</a></li>
 		            <li><a href="fdxx_delfdxxQuery">房东删除恢复</a></li> 
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right"> 
@@ -37,18 +37,22 @@
 	    </div>
 	</div>
 	<br><br><br>
-	<div class="panel panel-info pan">
+	<div class="panel panel-warning pan">
     <div class="panel-heading">
-        <h3 class="panel-title">房东信息</h3>
+        <h3 class="panel-title">已删除房源</h3>
     </div>
     <table class="table">
-    	<tr><th>用户名</th><th>真名</th><th>电话号码</th><th>操作</th></tr>
-        <s:iterator value="#request.fdlist" var="list">
+    	<tr><th>房源标题</th><th>租赁方式</th><th>区域</th><th>价格</th><th>上传时间</th><th>上传人</th><th>状态</th><th>操作</th></tr>
+        <s:iterator value="#request.relist" var="list">
         	<tr>
-	        	<td>${list.loginName }</td>
-	        	<td>${list.realName }</td>
-	        	<td>${list.phoneNumber }</td>
-	        	<td><a href="fd_queryfdxx?fd_id=${list.fd_id }" class="btn btn-info button">修改</a>&nbsp;<a href="fdxx_fdxxdel?fd_id=${list.fd_id }" class="btn btn-info button">删除</a></td>
+	        	<td><a href="ad_queryxx?fy_id=${list[7] }">${list[0] }</a></td>
+	        	<td>${list[2] }</td>
+	        	<td>${list[5] }</td>
+	        	<td>${list[1] }</td>
+	        	<td>${list[3] }</td>
+	        	<td>${list[8] }</td>
+	        	<td> <s:if test="#request.list[4]==\"1\"">通过</s:if><s:else>未通过</s:else></td>
+	        	<td><a href="recoverfy?fy_id=${list[7] }" class="btn btn-info button">恢复</a></td>
         	</tr>
         </s:iterator>
     </table>

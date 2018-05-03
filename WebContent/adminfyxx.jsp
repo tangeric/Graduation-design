@@ -25,7 +25,9 @@
 		        <ul class="nav navbar-nav">
 		            <li><a href="ad_querydshfy">房源审核</a></li>
 		            <li class="active"><a href="#">房源管理</a></li>
-		            <li><a href="fdxx_fdxxQuery">房东管理</a></li> 
+		            <li><a href="fdxx_querydelfy">删除房源恢复</a></li>
+		            <li><a href="fdxx_fdxxQuery">房东管理</a></li>
+		            <li><a href="fdxx_delfdxxQuery">房东删除恢复</a></li> 
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right"> 
 		            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.adminname}</a></li> 
@@ -49,7 +51,7 @@
 	        	<td>${list[1] }</td>
 	        	<td>${list[3] }</td>
 	        	<td>${list[8] }</td>
-	        	<td>${list[4] }</td>
+	        	<td> <s:if test="#request.list[4]==\"1\"">通过</s:if><s:else>未通过</s:else></td>
 	        	<td><a href="admindelete?fy_id=${list[7] }" class="btn btn-info button">删除</a></td>
         	</tr>
         </s:iterator>

@@ -25,9 +25,9 @@
 		        <ul class="nav navbar-nav">
 		            <li><a href="ad_querydshfy">房源审核</a></li>
 		            <li><a href="fdxx_adminfy">房源管理</a></li>
-		            <li><a href="fdxx_querydelfy">删除房源恢复</a></li>
-		            <li class="active"><a href="#">房东管理</a></li>
-		            <li><a href="fdxx_delfdxxQuery">房东删除恢复</a></li> 
+		            <li><a href="fdxx_querydelfy">房源删除恢复</a></li>
+		           	<li><a href="fdxx_fdxxQuery">房东管理</a></li> 
+		           	<li class="active"><a href="#">房东删除恢复</a></li> 
 		        </ul>
 		        <ul class="nav navbar-nav navbar-right"> 
 		            <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.adminname}</a></li> 
@@ -37,18 +37,18 @@
 	    </div>
 	</div>
 	<br><br><br>
-	<div class="panel panel-info pan">
+	<div class="panel panel-warning pan">
     <div class="panel-heading">
         <h3 class="panel-title">房东信息</h3>
     </div>
     <table class="table">
     	<tr><th>用户名</th><th>真名</th><th>电话号码</th><th>操作</th></tr>
-        <s:iterator value="#request.fdlist" var="list">
+        <s:iterator value="#request.delfdlist" var="list">
         	<tr>
 	        	<td>${list.loginName }</td>
 	        	<td>${list.realName }</td>
 	        	<td>${list.phoneNumber }</td>
-	        	<td><a href="fd_queryfdxx?fd_id=${list.fd_id }" class="btn btn-info button">修改</a>&nbsp;<a href="fdxx_fdxxdel?fd_id=${list.fd_id }" class="btn btn-info button">删除</a></td>
+	        	<td><a href="fdxx_fdxxrec?fd_id=${list.fd_id }" class="btn btn-info button">恢复</a></td>
         	</tr>
         </s:iterator>
     </table>

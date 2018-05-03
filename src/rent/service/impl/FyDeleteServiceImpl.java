@@ -21,4 +21,10 @@ public class FyDeleteServiceImpl implements FyDeleteService {
 		fyDeleteDao.delete(fy_id);
 	}
 
+	@Override
+	public void recoverfy(String fy_id) {
+		// TODO Auto-generated method stub
+		fyDeleteDao.recoverfy(fy_id);
+	}
+	
 }

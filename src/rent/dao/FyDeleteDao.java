@@ -23,4 +23,9 @@ public class FyDeleteDao {
 		Query query=getSession().createQuery(hql).setParameter("fy_id", fy_id);
 		query.executeUpdate();
 	}
+	public void recoverfy(String fy_id) {
+		String hql="update FyMainModel f set f.delflag='1' where f.fy_id=:fy_id";
+		Query query=getSession().createQuery(hql).setParameter("fy_id", fy_id);
+		query.executeUpdate();
+	}
 }
