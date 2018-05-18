@@ -21,6 +21,8 @@ public class FyQueryAction extends ActionSupport {
 	
 	private FyQueryService fyQueryService;
 	
+	private String title;
+	
 	private String district;
 	
 	private String room;
@@ -30,6 +32,14 @@ public class FyQueryAction extends ActionSupport {
 	private String toliet;
 
 	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getDistrict() {
 		return district;
 	}
@@ -79,10 +89,11 @@ public class FyQueryAction extends ActionSupport {
 			pageNum=Integer.parseInt(pageNumStr);//页码
 		}
 		System.out.println(toliet);
-		List<Object> list= fyQueryService.getfyMain(district,room,dinner,toliet,pageNum,pageSize);
-		Pager page=fyQueryService.getcount(district, room, dinner, toliet, pageNum, pageSize);
+		List<Object> list= fyQueryService.getfyMain(title,district,room,dinner,toliet,pageNum,pageSize);
+		Pager page=fyQueryService.getcount(title,district, room, dinner, toliet, pageNum, pageSize);
 		request.setAttribute("list", list);
 		request.setAttribute("page", page);
+		request.setAttribute("title", title);
 		request.setAttribute("district", district);
 		request.setAttribute("room", room);
 		request.setAttribute("dinner", dinner);

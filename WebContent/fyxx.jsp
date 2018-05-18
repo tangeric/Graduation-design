@@ -53,9 +53,11 @@ function handlePaginationClick(new_page_index,pagination_container){
 		<div id="middle">
 			<h2 align="center">房地产租赁信息系统</h2>
 			<div id="search">
-				<form method="post" id="stuForm" action="#">
+				<form method="post" id="stuForm" action="queryfyxx">
 					<table id="searchtable">
 						<tr>
+							<td>&nbsp;&nbsp;关键字搜索：&nbsp;&nbsp;</td>
+							<td><input type="text" class="form-control" value="${title }" name="title"></td>
 							<td>&nbsp;&nbsp;按区域搜索：&nbsp;&nbsp;</td>
 							<td>
 								<select name="district" class="form-control" id="dis">
@@ -110,7 +112,7 @@ function handlePaginationClick(new_page_index,pagination_container){
 								</select>
 							</td>
 							<td>&nbsp;&nbsp;卫&nbsp;&nbsp;</td>
-					    	<td>&nbsp;&nbsp;<input type="submit" class="btn btn-default" value="确定"></td>
+					    	<td>&nbsp;&nbsp;<input type="submit" class="btn btn-default" value="搜索"></td>
 						</tr>
 					</table>
 				</form>

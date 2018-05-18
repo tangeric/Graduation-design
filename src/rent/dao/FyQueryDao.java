@@ -25,7 +25,7 @@ public class FyQueryDao {
 		return sf.getCurrentSession();
 	}
 	
-	public Pager getcount(String district,String room,String dinner,String toliet,int pageNum,int pageSize){
+	public Pager getcount(String title,String district,String room,String dinner,String toliet,int pageNum,int pageSize){
 		StringBuilder countHql=new StringBuilder("select f.title,f.price,f.method,f.createTime,w.position,w.metro,w.village,x.area,x.room,x.dinner,x.toliet,x.year,x.floor,x.direction,p.pic1 from FyMainModel as f,FyfxModel as x,FywzModel as w,FyPicModel as p where f.fy_id=x.fy_id and f.fy_id=w.fy_id and f.fy_id=p.fy_id and f.delflag='1' and f.flag='1'");
 		if(district!=null&&!district.equals("")){
 			countHql.append(" and w.District like :district");
@@ -38,6 +38,9 @@ public class FyQueryDao {
 		}
 		if(toliet!=null&&!toliet.equals("")){
 			countHql.append(" and x.toliet like :toliet");
+		}
+		if(title!=null&&!title.equals("")){
+			countHql.append(" and f.title like :title");
 		}
 		
 		Query countQuery=getSession().createQuery(countHql.toString());
@@ -54,6 +57,9 @@ public class FyQueryDao {
 		if(toliet!=null&&!toliet.equals("")){
 			countQuery.setParameter("toliet", "%"+toliet+"%");
 		}
+		if(title!=null&&!title.equals("")){
+			countQuery.setParameter("title", "%"+title+"%");
+		}
 		
 		List<?> countResult=countQuery.list();
 		int totalRecord=countResult.size();
@@ -69,7 +75,7 @@ public class FyQueryDao {
 		return page;
 	}
 	
-	public List<Object> getfyMain(String district,String room,String dinner,String toliet,int pageNum,int pageSize){
+	public List<Object> getfyMain(String title,String district,String room,String dinner,String toliet,int pageNum,int pageSize){
 	
 		
 		
@@ -89,6 +95,10 @@ public class FyQueryDao {
 			
 			hql1.append(" and x.toliet like :toliet");
 		}
+		if(title!=null&&!title.equals("")){
+			
+			hql1.append(" and f.title like :title");
+		}
 		
 		
 		
@@ -105,6 +115,9 @@ public class FyQueryDao {
 		}
 		if(toliet!=null&&!toliet.equals("")){
 			query1.setParameter("toliet", "%"+toliet+"%");
+		}
+		if(title!=null&&!title.equals("")){
+			query1.setParameter("title", "%"+title+"%");
 		}
 		query1.setFirstResult(fromIndex);
 		query1.setMaxResults(pageSize);

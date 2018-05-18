@@ -25,17 +25,17 @@ public class FyQueryServiceImpl implements FyQueryService {
 	
 
 	@Override
-	public Pager getcount(String district, String room, String dinner, String toliet, int pageNum, int pageSize) {
+	public Pager getcount(String title,String district, String room, String dinner, String toliet, int pageNum, int pageSize) {
 		// TODO Auto-generated method stub
-		return fyQueryDao.getcount(district, room, dinner, toliet, pageNum, pageSize);
+		return fyQueryDao.getcount(title,district, room, dinner, toliet, pageNum, pageSize);
 	}
 
 
 
 	@Override
-	public List<Object> getfyMain(String district,String room,String dinner,String toliet,int pageNum,int pageSize) {
+	public List<Object> getfyMain(String title,String district,String room,String dinner,String toliet,int pageNum,int pageSize) {
 		// TODO Auto-generated method stub
-		return fyQueryDao.getfyMain(district,room,dinner,toliet,pageNum,pageSize);
+		return fyQueryDao.getfyMain(title,district,room,dinner,toliet,pageNum,pageSize);
 	}
 	
 }
